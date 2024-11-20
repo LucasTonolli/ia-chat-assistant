@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Models\User;
 
-class UserServices
+class UserService
 {
   public function store($data)
   {
