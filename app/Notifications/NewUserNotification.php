@@ -34,13 +34,13 @@ class NewUserNotification extends Notification
     public function toWhatsapp($notification)
     {
 
-        $message = (new WhatsappMessage())
+        return (new WhatsappMessage())
             ->contentSid('HX243e2ad4d8609df1d3b41fc47881d9ff') //Template ID
             ->variables([
                 '1' => $this->name,
                 '2' => $this->text
             ]);
 
-        return $message;
+      
     }
 }

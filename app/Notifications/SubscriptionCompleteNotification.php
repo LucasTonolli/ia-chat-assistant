@@ -34,12 +34,10 @@ class SubscriptionCompleteNotification extends Notification
     public function toWhatsapp($notification)
     {
 
-        $message = (new WhatsappMessage())
+        return (new WhatsappMessage())
             ->contentSid('HXc995bb2ec5581f20fe0ae39e759dc219') //Template ID
             ->variables([
                 '2' => $this->name,
             ]);
-
-        return $message;
     }
 }
