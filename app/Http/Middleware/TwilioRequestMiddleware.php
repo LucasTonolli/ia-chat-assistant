@@ -19,6 +19,15 @@ class TwilioRequestMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
+        $url = $request->fullUrl();  // Certifique-se de obter a URL completa
+
+        // Verifique se a URL é válida antes de validar a assinatura
+        $parsedUrl = parse_url($url);
+        if ($parsedUrl === false || !isset($parsedUrl['scheme'])) {
+            // Retorne erro ou log para a URL inválida
+            return response('URL inválida', 400);
+        }
+
         $validator = new RequestValidator(config('twilio.auth_token'));
 
         $signature = $request->headers->get('X-Twilio-Signature');
