@@ -165,7 +165,7 @@
 
 
 
-    <section class="bg-[#1E1E2F] text-white py-12">
+    <section id="pricing" class="bg-[#1E1E2F] text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-6">
                 Pronto para Organizar Suas Tarefas e Maximizar Seu Potencial?
