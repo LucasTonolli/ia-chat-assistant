@@ -25,7 +25,7 @@ class TwilioRequestMiddleware
 
         if (!$signature) response('', 403);
 
-        logger('Validating signature', [$signature]);
+        logger('Validating signature', [$signature, $request->all()]);
 
         $isValid = $validator->validate(
             $signature,
