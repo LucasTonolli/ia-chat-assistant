@@ -9,7 +9,7 @@ class StripeService
 {
   public function payment(User $user)
   {
-    $result = $user->checkout('price_1QN2pWCWy1mcbAVkoKV7uD0F', [
+    $result = $user->checkout(config('stripe.product_price_id'), [
       'phone_number_collection' => ['enabled' => true],
       'mode' => 'subscription',
       'success_url' => 'https://wa.me/' . str_replace('+', '', config('twilio.from')),
