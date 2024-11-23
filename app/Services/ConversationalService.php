@@ -6,7 +6,9 @@ use App\Models\User;
 use App\Notifications\GenericNotification;
 use App\Notifications\MenuNotification;
 use App\Notifications\ScheduleListNotification;
+use App\Notifications\SubscriptionCancelledNotification;
 use Exception;
+use Laravel\Cashier\Subscription;
 use OpenAI;
 use OpenAI\Responses\Chat\CreateResponse;
 use OpenAI\Testing\ClientFake;
@@ -22,6 +24,7 @@ class ConversationalService
     '!agenda' => 'showSchedule',
     '!insights' => 'showInsights',
     '!update'  => 'showUpdate',
+    '!cancel'  => 'cancelSubscription',
   ];
 
   public function __construct()
@@ -119,6 +122,14 @@ class ConversationalService
     $this->user->save();
 
     $this->user->notify(new GenericNotification($message));
+  }
+
+  public function cancelSubscription()
+  {
+    $this->user->subscription('default')->cancelNow();
+    $this->user->save();
+
+    $this->user->notify(new SubscriptionCancelledNotification());
   }
 
   public function getUserRoutine($days = 30)

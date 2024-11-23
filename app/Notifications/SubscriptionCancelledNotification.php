@@ -9,20 +9,12 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class MenuNotification extends Notification
+class SubscriptionCancelledNotification extends Notification
 {
     use Queueable;
 
-    protected string $message = "Aqui estão os comandos que você pode usar para aproveitar ao máximo o assistente:
 
-*!menu* - Exibe essa lista com todas as opções de comandos.
-*!agenda* - Mostra as próximas tarefas e agendamentos que você tem programados.
-*!insights* - Gera insights sobre suas tarefas dos últimos dias, ajudando você a identificar padrões e oportunidades para melhorar sua produtividade.
-*!update* - Atualiza uma determinada tarefa
-*!cancel* - Cancela a assinatura do assistente
-
-É só escolher o comando que precisa e eu cuido do resto ou me mandar qualquer coisa que eu te ajudo! 😊";
-
+    protected string $message = 'Assinatura cancelada!';
     /**
      * Create a new notification instance.
      */
@@ -41,7 +33,7 @@ class MenuNotification extends Notification
         return [WhatsappChannel::class];
     }
 
-    public function toWhatsapp()
+    public function toWhatsapp($notification)
     {
 
         return (new WhatsappMessage())
