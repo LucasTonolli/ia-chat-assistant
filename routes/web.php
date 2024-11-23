@@ -13,3 +13,9 @@ Route::get('/terms', function () {
 Route::get('/privacy-policy', function () {
     return view('privacy-policy');
 })->name('privacy-policy');
+
+
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap', [], 200)
+        ->header('Content-Type', 'application/xml');
+});
