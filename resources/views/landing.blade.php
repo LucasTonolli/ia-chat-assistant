@@ -165,7 +165,7 @@
 
 
 
-    <section id="pricing" class="bg-[#1E1E2F] text-white py-12">
+    <section class="bg-[#1E1E2F] text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-6">
                 Pronto para Organizar Suas Tarefas e Maximizar Seu Potencial?
@@ -175,7 +175,7 @@
             </p>
 
             <!-- Card de Preço -->
-            <div class="bg-[#2C2C44] p-8 rounded-lg shadow-lg max-w-xs mx-auto">
+            <div class="bg-[#2E2E44] p-8 rounded-lg shadow-lg max-w-xs mx-auto tablet:max-w-[30rem]">
                 <h3 class="text-xl font-semibold mb-4">Plano Único</h3>
                 <p class="text-lg text-[#A0A0B1] mb-4">Ideal para quem busca um assistente virtual que centralize todas as suas tarefas de forma simples e eficiente. Inclui integração com ChatGPT e agendador inteligente.</p>
                 <div class="border-t border-[#3A3A4D] pt-6 mb-6">
@@ -191,6 +191,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6">
