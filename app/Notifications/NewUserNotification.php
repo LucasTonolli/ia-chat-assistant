@@ -35,7 +35,7 @@ class NewUserNotification extends Notification
     {
 
         return (new WhatsappMessage())
-            ->contentSid('HX243e2ad4d8609df1d3b41fc47881d9ff') //Template ID
+            ->contentSid(config('twilio.new_user_notification_sid')) //Template ID
             ->variables([
                 '1' => $this->name,
                 '2' => $this->text

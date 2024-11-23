@@ -35,7 +35,7 @@ class SubscriptionCompleteNotification extends Notification
     {
 
         return (new WhatsappMessage())
-            ->contentSid('HXc995bb2ec5581f20fe0ae39e759dc219') //Template ID
+            ->contentSid(config('twilio.subscribed_notification_sid')) //Template ID
             ->variables([
                 '2' => $this->name,
             ]);
