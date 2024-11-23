@@ -174,19 +174,22 @@
                 Comece agora a simplificar sua rotina e aproveite todos os benefícios do nosso Assistente Virtual. Organize, planeje e tenha insights para otimizar suas tarefas diárias.
             </p>
 
-            <!-- Tabela de Preços -->
-            <div class="bg-[#2C2C44] p-8 rounded-lg shadow-lg max-w-md mx-auto">
+            <div class="bg-[#2C2C44] p-8 rounded-lg shadow-lg max-w-xs mx-auto">
                 <h3 class="text-xl font-semibold mb-4">Plano Único</h3>
-                <p class="text-lg mb-4">Ideal para quem busca um assistente virtual que centralize todas as suas tarefas de forma simples e eficiente. Inclui integração com ChatGPT e agendador inteligente.</p>
-                <p class="text-3xl font-bold mb-6">R$ 29,90 / mês</p>
-                <ul class="mb-6">
-                    <li>1 Usuário</li>
-                    <li>Agendador de Tarefas</li>
-                    <li>Integração com ChatGPT para Insights</li>
-                    <li>Acesso ao Histórico de Tarefas</li>
+                <p class="text-lg text-[#A0A0B1] mb-4">Ideal para quem busca um assistente virtual que centralize todas as suas tarefas de forma simples e eficiente. Inclui integração com ChatGPT e agendador inteligente.</p>
+                <div class="border-t border-[#3A3A4D] pt-6 mb-6">
+                    <p class="text-3xl font-bold">R$ 59,90 <span class="text-sm text-[#A0A0B1]">/ mês</span></p>
+                </div>
+                <ul class="text-left mb-6 text-[#A0A0B1]">
+                    <li>✔ 1 Usuário</li>
+                    <li>✔ Agendador de Tarefas</li>
+                    <li>✔ Integração com ChatGPT para Insights</li>
+                    <li>✔ Acesso ao Histórico de Tarefas</li>
                 </ul>
-                <a href="https://wa.me/{{str_replace('+', '', config('twilio.from'))}}" class="bg-[#6081EB] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#4A6AD1] transition duration-300" target="_blank">Assine Agora</a>
+                <a href="https://wa.me/{{str_replace('+', '', config('twilio.from'))}}" class="bg-[#6081EB] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#4A6AD1] transition duration-300">Assine Agora</a>
             </div>
+
+
         </div>
     </section>
 
