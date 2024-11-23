@@ -62,7 +62,7 @@
 
 
     <!-- Hero Section -->
-    <section class="bg-[#1E1E2F] text-white min-h-screen flex items-center">
+    <section id="home" class="bg-[#1E1E2F] text-white min-h-screen flex items-center">
         <div class="container mx-auto px-6 flex flex-col lg:flex-row lg:items-center  md:mt-0 mt-10">
             <!-- Esquerda: Copy -->
             <div class="w-full lg:w-1/2 text-center lg:text-left px-4">
@@ -123,14 +123,13 @@
 
 
     <!-- Funcionalidades Section -->
-    <section class="bg-[#1E1E2F] text-white py-16">
+    <section id="features" class="bg-[#1E1E2F] text-white py-16">
         <div class="container mx-auto text-center px-6">
             <h2 class="text-3xl font-semibold mb-8">Funcionalidades do Assistente Virtual</h2>
             <p class="text-lg text-[#A0A0B1] mb-12">Com nosso assistente virtual, você tem tudo o que precisa para uma organização mais simples e eficiente.</p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Funcionalidade 1 -->
-                <!-- Funcionalidade 1: Gestão de Tarefas -->
+
                 <div class="bg-[#2A2A3D] p-8 rounded-lg shadow-lg transition duration-300 hover:scale-105">
                     <div class="text-[#6081EB] text-4xl mb-4 mx-auto">
                         <i class="ri-task-line"></i>
@@ -166,17 +165,27 @@
 
 
 
-    <section class="bg-[#5B19E3] text-white py-16">
-        <div class="container mx-auto text-center px-6">
-            <h2 class="text-3xl font-semibold mb-4">Transforme sua Organização Agora Mesmo!</h2>
-            <p class="text-lg text-[#E0E0E0] mb-8">Chega de perder tempo com tarefas desorganizadas. Deixe nosso assistente virtual te ajudar a otimizar seu tempo e alcançar seus objetivos com eficiência.</p>
+    <section id="pricing" class="bg-[#1E1E2F] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">
+                Pronto para Organizar Suas Tarefas e Maximizar Seu Potencial?
+            </h2>
+            <p class="text-lg text-[#A0A0B1] mb-8">
+                Comece agora a simplificar sua rotina e aproveite todos os benefícios do nosso Assistente Virtual. Organize, planeje e tenha insights para otimizar suas tarefas diárias.
+            </p>
 
-            <div class="flex justify-center space-x-4">
-                <!-- Botão de CTA 1: Experimente Agora -->
-                <a href="https://wa.me/{{str_replace('+', '', config('twilio.from'))}}"
-                    class="bg-[#6081EB] text-white px-8 py-4 rounded-lg shadow-lg text-xl font-semibold hover:bg-[#4A6AD1] transition duration-300">
-                    Experimente Agora
-                </a>
+            <!-- Tabela de Preços -->
+            <div class="bg-[#2C2C44] p-8 rounded-lg shadow-lg max-w-md mx-auto">
+                <h3 class="text-xl font-semibold mb-4">Plano Único</h3>
+                <p class="text-lg mb-4">Ideal para quem busca um assistente virtual que centralize todas as suas tarefas de forma simples e eficiente. Inclui integração com ChatGPT e agendador inteligente.</p>
+                <p class="text-3xl font-bold mb-6">R$ 29,90 / mês</p>
+                <ul class="mb-6">
+                    <li>1 Usuário</li>
+                    <li>Agendador de Tarefas</li>
+                    <li>Integração com ChatGPT para Insights</li>
+                    <li>Acesso ao Histórico de Tarefas</li>
+                </ul>
+                <a href="https://wa.me/{{str_replace('+', '', config('twilio.from'))}}" class="bg-[#6081EB] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#4A6AD1] transition duration-300" target="_blank">Assine Agora</a>
             </div>
         </div>
     </section>
