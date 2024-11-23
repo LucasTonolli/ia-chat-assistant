@@ -23,6 +23,9 @@ class TwilioRequestMiddleware
 
         // Verifique se a URL é válida antes de validar a assinatura
         $parsedUrl = parse_url($url);
+
+        logger('parsedUrl', [$parsedUrl, $request]);
+
         if ($parsedUrl === false || !isset($parsedUrl['scheme'])) {
             // Retorne erro ou log para a URL inválida
             return response('URL inválida', 400);
