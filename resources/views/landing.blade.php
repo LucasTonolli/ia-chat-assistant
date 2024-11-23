@@ -185,7 +185,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6">
         <p>&copy; 2024 Assistente Virtual. Todos os direitos reservados.</p>
-        <p><a href="/privacy-policy" class="text-gray-400 hover:text-gray-200">Política de Privacidade</a> | <a href="/terms" class="text-gray-400 hover:text-gray-200">Termos de Serviço</a></p>
+        <p><a href="{{route('privacy-policy')}}" class="text-gray-400 hover:text-gray-200">Política de Privacidade</a> | <a href="{{route('terms')}}" class="text-gray-400 hover:text-gray-200">Termos de Serviço</a></p>
     </footer>
 
 
