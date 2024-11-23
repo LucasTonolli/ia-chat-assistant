@@ -39,7 +39,7 @@ class TwilioRequestMiddleware
         $isValid = $validator->validate(
             $signature,
             config('twilio.new_message_url'),
-            $request->all()
+            $request
         );
 
         if (!$isValid) response('', 403);
