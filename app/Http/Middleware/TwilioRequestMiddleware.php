@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twilio\Security\RequestValidator;
 
+use function Laravel\Prompts\error;
+
 class TwilioRequestMiddleware
 {
     /**
@@ -22,6 +24,8 @@ class TwilioRequestMiddleware
         $signature = $request->headers->get('X-Twilio-Signature');
 
         if (!$signature) response('', 403);
+
+        logger('Validating signature', [$signature]);
 
         $isValid = $validator->validate(
             $signature,
