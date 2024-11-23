@@ -187,7 +187,7 @@
                     <li>✔ Integração com ChatGPT para Insights</li>
                     <li>✔ Acesso ao Histórico de Tarefas</li>
                 </ul>
-                <a href="https://wa.me/{{str_replace('+', '', config('twilio.from'))}}" class="bg-[#6081EB] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#4A6AD1] transition duration-300">Assine Agora</a>
+                <a href="https://wa.me/{{str_replace('+', '', config('twilio.from'))}}" class="bg-[#6081EB] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#20C997] transition duration-300">Assine Agora</a>
             </div>
         </div>
     </section>
