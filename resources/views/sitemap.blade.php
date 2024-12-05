@@ -9,14 +9,14 @@
     </url>
     <!-- Página de Termos de Serviço -->
     <url>
-        <loc>https://ia-assistente.afilitrends.com/terms</loc>
+        <loc>https://assistente.afilitrends.com/terms</loc>
         <lastmod>2024-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- Outras páginas importantes -->
     <url>
-        <loc>https://ia-assistente.afilitrends.com/privacy-policy</loc>
+        <loc>https://assistente.afilitrends.com/privacy-policy</loc>
         <lastmod>2024-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
